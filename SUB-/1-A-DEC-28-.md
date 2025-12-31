@@ -1,18 +1,19 @@
 # TypeScript, React, React Native ( From beginner to advanced )
 
-- Comprehensive coding video series hosted by Vandad Nahavandipoor. The tutorial focuses on building a foundation in TypeScript before progressing to React and React Native.
+* Comprehensive coding video series hosted by Vandad Nahavandipoor. The tutorial focuses on building a foundation in TypeScript before progressing to React and React Native.
 
 
 ---
----
+
 
 
 # Lecture Video tutorial - 1 : TypeScript from Scratch - Environment Setup, Node, NVM, and Why TypeScript Exists
 
-![Initial Setup Phase][Chapter-01-A-ref]
+![Introduction][Chapter-01-A-ref]
 
 
-## The introductory video of a comprehensive coding series hosted by Vandad. The tutorial focuses on building a foundation in TypeScript before progressing to React and React Native.
+
+### The introductory video of a comprehensive coding series hosted by Vandad. The tutorial focuses on building a foundation in TypeScript before progressing to React and React Native.
 
 Learn TypeScript (TS) fundamentals, Node, and NVM. This tutorial explains why TypeScript exists and its benefits, demonstrating environment setup for future React and React Native projects. Explore the tsconfig.json file and its impact on development workflow.
 
@@ -25,7 +26,7 @@ The instructor emphasizes that this is a "no-shortcut" series aimed at building 
 
 ---
 
-## **Topic 1: Introduction to the Series**
+## 💻 **Topic 1: Introduction to the Series**
 
 This section defines the roadmap and the pedagogical approach of the tutorial.
 
@@ -38,7 +39,7 @@ This section defines the roadmap and the pedagogical approach of the tutorial.
 
 ---
 
-## **Topic 2: Foundations of TypeScript (TS) **
+## 💻 **Topic 2: Foundations of TypeScript (TS) **
 
 This section explains the shift from JavaScript to TypeScript and the immediate benefits for a developer.
 
@@ -66,13 +67,13 @@ The following table highlights specific terms used in the tutorial, along with b
 
 
 
----
 
 
-- 02:59 The Problem with JavaScript at Scale
+
+* 02:59 The Problem with JavaScript at Scale
   
 
----
+![Problem with JavaScript][Chapter-01-B-ref]
 
 
 
@@ -86,7 +87,7 @@ This section of the series provides a critical analysis of JavaScript’s archit
 
 ---
 
-## **Topic 3: The JavaScript Dilemma**
+## 💻 **Topic 3: The JavaScript Dilemma**
 
 This section explores the relationship between JavaScript's flexibility and the inevitable bugs that arise in production.
 
@@ -99,7 +100,7 @@ This section explores the relationship between JavaScript's flexibility and the 
 
 ---
 
-## **Topic 4: Maintenance and Scaling Challenges**
+## 💻 **Topic 4: Maintenance and Scaling Challenges**
 
 This section details how the absence of a type system impacts team collaboration and the ability to modify existing codebases.
 
@@ -112,7 +113,7 @@ This section details how the absence of a type system impacts team collaboration
 
 ---
 
-## **Topic 5: The TypeScript Solution**
+## 💻 **Topic 5: The TypeScript Solution**
 
 This section defines TypeScript’s role not as a replacement, but as a protective layer for modern development.
 
@@ -161,27 +162,28 @@ greetUser(invalidUser);
 
 ```
 
----
 
-
-
-
----
-
-
-- 07:47 What TypeScript Actually is (and is Not)
-
-
----
 
 
 
 
 ---
 
+
+* 07:47 What TypeScript Actually is (and is Not)
+
+
+![Nature of TypeScript][Chapter-01-C-ref]
+
+
+
+
+
 ---
 
-## **Topic 6: The Nature of TypeScript**
+
+
+## 💻 **Topic 6: The Nature of TypeScript**
 
 This section deconstructs the common misunderstandings about what TypeScript is and how it interacts with the browser.
 
@@ -193,7 +195,7 @@ This section deconstructs the common misunderstandings about what TypeScript is 
 
 ---
 
-## **Topic 7: Strengths & Limitations**
+## 💻 **Topic 7: Strengths & Limitations**
 
 Understanding where TypeScript's authority begins and ends is crucial for production-level stability.
 
@@ -253,23 +255,11 @@ function greet(user: User) {
 * **The Rationale:** In JavaScript, you find out about mistakes when the user crashes the app.
 * **The Implementation:** In TypeScript, the "Reviewer" (Compiler) highlights the line in red the moment you make the typo, giving you the **confidence** to refactor or change code without fear of breaking distant modules.
 
----
-
-
-
----
 
 
 
 
----
 
-
-- 11:58 TypeScript as a Developer Tool
-- ( Why does this actually matter in practice? )
-
-
----
 
 
 
@@ -277,9 +267,22 @@ function greet(user: User) {
 ---
 
 
+* 11:58 TypeScript as a Developer Tool
+  - ( Why does this actually matter in practice? )
+
+
 ---
 
-## **Topic 5: Practical Value of TypeScript**
+
+![TypeScript as a Developer Tool][Chapter-01-D-ref]
+
+
+
+
+
+
+
+## 💻 **Topic 5: Practical Value of TypeScript**
 
 This section explores why type safety is a "leverage over complexity" and how it fundamentally transforms the day-to-day developer experience.
 
@@ -292,7 +295,7 @@ This section explores why type safety is a "leverage over complexity" and how it
 
 ---
 
-## **Topic 6: Scaling & Refactoring**
+## 💻 **Topic 6: Scaling & Refactoring**
 
 As applications grow (especially in React/React Native), maintaining consistency becomes the primary challenge.
 
@@ -355,20 +358,17 @@ function Display(p: Product) {
 
 
 
----
 
-
-
-
----
 
 
 - 16:07 Intro to nvm
-- ( Installing Node.js the Right Way with NVM )
-- ( Node Version Manager )
+  - ( Installing Node.js the Right Way with NVM )
+  - ( Node Version Manager )
 
 ---
 
+
+![Intro to nvm][Chapter-01-E-ref]
 
 
 
@@ -398,8 +398,10 @@ function Display(p: Product) {
 ---
 
 [Chapter-01-A-ref]: ./1-A-DEC-28--SRC-/Screenshot%20(17941).png
-
-[Chapter-01-D-ref]: ./1-A-DEC-28--SRC-/Screenshot%20(17944).png
+[Chapter-01-B-ref]: ./1-A-DEC-28--SRC-/Screenshot%20(17944).png
+[Chapter-01-C-ref]: ./1-A-DEC-28--SRC-/Screenshot%20(17945).png
+[Chapter-01-D-ref]: ./1-A-DEC-28--SRC-/Screenshot%20(17947).png
+[Chapter-01-E-ref]: ./1-A-DEC-28--SRC-/Screenshot%20(17950).png
 
 
 ---
