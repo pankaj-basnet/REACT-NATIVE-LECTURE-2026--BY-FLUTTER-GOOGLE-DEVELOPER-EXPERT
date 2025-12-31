@@ -6,11 +6,11 @@
 ---
 ---
 
-D:\src\REACT-NATIVE-\TUTS-\YTD-\VANDAD-REACT-TYPESCRIPT-GITHUB-\LECTURE-\SUB-\1-A-DEC-28-.md
 
 # Lecture Video tutorial - 1 : TypeScript from Scratch - Environment Setup, Node, NVM, and Why TypeScript Exists
 
-"D:\src\REACT-NATIVE-\TUTS-\YTD-\VANDAD-REACT-TYPESCRIPT-GITHUB-\LECTURE-\SUB-\1-A-DEC-28--SRC-\Screenshot (17941).png"
+![Initial Setup Phase][Chapter-01-A-ref]
+
 
 ## The introductory video of a comprehensive coding series hosted by Vandad. The tutorial focuses on building a foundation in TypeScript before progressing to React and React Native.
 
@@ -385,30 +385,21 @@ function Display(p: Product) {
 ---
 
 
-![Verification Step][verify-ref]
 
-### 4. Project Initialization
-Finalizing the folder structure for the "Vandad React TypeScript" course.
-![Final Setup][final-ref]
-
----
-
-## Why TypeScript Exists
-* **Type Safety:** Catching errors during development rather than at runtime.
-* **IntelliSense:** Better autocomplete and documentation within VS Code.
-* **Refactoring:** Safely changing code structures in large-scale React Native projects.
-
----
-
-[setup-ref]: ./1-A-DEC-28--SRC-/Screenshot%20(17941).png
-[nvm-ref]: ./1-A-DEC-28--SRC-/Screenshot%20(17942).png
-[verify-ref]: ./1-A-DEC-28--SRC-/Screenshot%20(17943).png
-[final-ref]: ./1-A-DEC-28--SRC-/Screenshot%20(17944).png
+[Chapter-01-A-ref]: ./1-A-DEC-28--SRC-/Screenshot (17941).png
+[Chapter-01-B-ref]: ./1-A-DEC-28--SRC-/Screenshot (17941).png
+[Chapter-01-C-ref]: ./1-A-DEC-28--SRC-/Screenshot (17941).png
+[Chapter-01-D-ref]: ./1-A-DEC-28--SRC-/Screenshot (17941).png
 
 
 ---
 
 
+---
+
+[Chapter-01-A-ref]: ./1-A-DEC-28--SRC-/Screenshot%20(17941).png
+
+[Chapter-01-D-ref]: ./1-A-DEC-28--SRC-/Screenshot%20(17944).png
 
 
 ---
