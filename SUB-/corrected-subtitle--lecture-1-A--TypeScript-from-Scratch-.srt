@@ -1,0 +1,2675 @@
+1
+00:00:07,600 --> 00:00:09,599
+Hello and welcome to this series on
+
+2
+00:00:09,599 --> 00:00:12,000
+learning TypeScript, React and React
+
+3
+00:00:12,000 --> 00:00:14,960
+Native, entirely from scratch and all the
+
+4
+00:00:14,960 --> 00:00:16,640
+way to advanced production level
+
+5
+00:00:16,640 --> 00:00:19,520
+concepts. My name is Vandad and the goal
+
+6
+00:00:19,520 --> 00:00:22,160
+of this series is very simple. By the
+
+7
+00:00:22,160 --> 00:00:23,279
+end of it, you should not only
+
+8
+00:00:23,279 --> 00:00:25,279
+understand how to use React and React
+
+9
+00:00:25,279 --> 00:00:28,000
+Native with TypeScript, but why things
+
+10
+00:00:28,000 --> 00:00:29,760
+work, the way they do and how to think
+
+11
+00:00:29,760 --> 00:00:32,239
+about building real-world applications in
+
+12
+00:00:32,239 --> 00:00:35,840
+a scalable and maintainable way. I want
+
+13
+00:00:35,840 --> 00:00:37,440
+to be very clear about something from
+
+14
+00:00:37,440 --> 00:00:39,440
+the beginning. This series is not about
+
+15
+00:00:39,440 --> 00:00:41,840
+shortcuts. It's not about copying
+
+16
+00:00:41,840 --> 00:00:45,120
+snippets or blindly following tutorials.
+
+17
+00:00:45,120 --> 00:00:47,039
+It's about building a strong mental
+
+18
+00:00:47,039 --> 00:00:49,600
+model, starting from Typescript
+
+19
+00:00:49,600 --> 00:00:51,600
+fundamentals, then moving into React on
+
+20
+00:00:51,600 --> 00:00:53,360
+the web, and finally React Native for
+
+21
+00:00:53,360 --> 00:00:56,559
+mobile, while using TS consistently
+
+22
+00:00:56,559 --> 00:00:59,199
+throughout. The reason I'm doing this is
+
+23
+00:00:59,199 --> 00:01:00,640
+because in my experience, the best way
+
+24
+00:01:00,640 --> 00:01:03,440
+to truly learn something is to teach it.
+
+25
+00:01:03,440 --> 00:01:05,600
+So, as I work through these concepts,
+
+26
+00:01:05,600 --> 00:01:07,600
+I'm going to explain not just what we're
+
+27
+00:01:07,600 --> 00:01:09,840
+doing, but why we're doing it, what
+
+28
+00:01:09,840 --> 00:01:12,159
+problems it solves, and what mistakes
+
+29
+00:01:12,159 --> 00:01:15,360
+people commonly make along the way.
+
+30
+00:01:15,360 --> 00:01:16,720
+Each video in this series is
+
+31
+00:01:16,720 --> 00:01:18,799
+intentionally long, around an hour,
+
+32
+00:01:18,799 --> 00:01:21,680
+because real understanding takes time.
+
+33
+00:01:21,680 --> 00:01:23,360
+We're going to slow down. We're going to
+
+34
+00:01:23,360 --> 00:01:25,360
+explore edge cases. We're going to make
+
+35
+00:01:25,360 --> 00:01:28,640
+mistakes on purpose and fix them. And I
+
+36
+00:01:28,640 --> 00:01:30,320
+encourage you to pause the video, code
+
+37
+00:01:30,320 --> 00:01:33,119
+along, and experiment as we go. In this
+
+38
+00:01:33,119 --> 00:01:35,119
+first video, we're not touching React
+
+39
+00:01:35,119 --> 00:01:37,360
+yet. Instead, we're starting with
+
+40
+00:01:37,360 --> 00:01:39,680
+Typescript itself. We're going to answer
+
+41
+00:01:39,680 --> 00:01:42,720
+some foundational questions.
+
+42
+00:01:42,720 --> 00:01:46,640
+Why does Typescript exist? What problem
+
+43
+00:01:46,640 --> 00:01:49,600
+is it actually solving? And how do we
+
+44
+00:01:49,600 --> 00:01:52,399
+set up a clean, modern TS environment
+
+45
+00:01:52,399 --> 00:01:54,320
+that we can build on for the rest of the
+
+46
+00:01:54,320 --> 00:01:56,159
+series? If you're coming from
+
+47
+00:01:56,159 --> 00:01:58,240
+JavaScript, some of this may feel
+
+48
+00:01:58,240 --> 00:02:00,560
+familiar, and some of it may feel
+
+49
+00:02:00,560 --> 00:02:02,479
+uncomfortable at first, and that's
+
+50
+00:02:02,479 --> 00:02:05,280
+completely normal. Typescript is
+
+51
+00:02:05,280 --> 00:02:07,759
+designed to surface problems early, and
+
+52
+00:02:07,759 --> 00:02:10,319
+that can feel annoying before it feels
+
+53
+00:02:10,319 --> 00:02:13,040
+empowering. But over time, it becomes
+
+54
+00:02:13,040 --> 00:02:14,879
+one of the most valuable tools you have
+
+55
+00:02:14,879 --> 00:02:17,200
+as a developer. By the end of this
+
+56
+00:02:17,200 --> 00:02:19,040
+video, you should have a working
+
+57
+00:02:19,040 --> 00:02:21,680
+TypeScript setup on your machine, a
+
+58
+00:02:21,680 --> 00:02:23,840
+clear understanding of what TypeScript
+
+59
+00:02:23,840 --> 00:02:26,239
+is and is not, and a solid foundation
+
+60
+00:02:26,239 --> 00:02:28,879
+for everything that follows, especially
+
+61
+00:02:28,879 --> 00:02:32,239
+when we move into React where TS really
+
+62
+00:02:32,239 --> 00:02:35,120
+starts to shine. One last thing before
+
+63
+00:02:35,120 --> 00:02:36,800
+we begin, you do not need to be an
+
+64
+00:02:36,800 --> 00:02:38,959
+expert to follow along. Basic JavaScript
+
+65
+00:02:38,959 --> 00:02:41,280
+knowledge is enough. And if something
+
+66
+00:02:41,280 --> 00:02:42,959
+doesn't make sense immediately, that's
+
+67
+00:02:42,959 --> 00:02:45,920
+okay. We'll revisit ideas multiple times
+
+68
+00:02:45,920 --> 00:02:47,280
+throughout the series from different
+
+69
+00:02:47,280 --> 00:02:50,400
+angles. So with that said, let's start
+
+70
+00:02:50,400 --> 00:02:51,760
+at the beginning and talk about the
+
+71
+00:02:51,760 --> 00:02:54,480
+problems TS was created to solve and why
+
+72
+00:02:54,480 --> 00:02:56,879
+it has become such a critical part of
+
+73
+00:02:56,879 --> 00:02:58,800
+modern React and React Native
+
+74
+00:02:58,800 --> 00:03:00,480
+development.
+
+75
+00:03:00,480 --> 00:03:02,560
+Before we talk about TypeScript, we need
+
+76
+00:03:02,560 --> 00:03:05,280
+to be very honest about JS or
+
+77
+00:03:05,280 --> 00:03:07,280
+JavaScript.
+
+78
+00:03:07,280 --> 00:03:09,840
+JS is an incredibly successful language.
+
+79
+00:03:09,840 --> 00:03:13,200
+is flexible, it's expressive, and it
+
+80
+00:03:13,200 --> 00:03:15,599
+allows you to move very fast, especially
+
+81
+00:03:15,599 --> 00:03:18,400
+at the beginning of a project. And that
+
+82
+00:03:18,400 --> 00:03:21,920
+flexibility is exactly why so many of us
+
+83
+00:03:21,920 --> 00:03:24,640
+fall in love with it. But that same
+
+84
+00:03:24,640 --> 00:03:26,720
+flexibility is also where the problems
+
+85
+00:03:26,720 --> 00:03:30,640
+begin. JavaScript is a dynamically typed
+
+86
+00:03:30,640 --> 00:03:32,799
+language which means the language itself
+
+87
+00:03:32,799 --> 00:03:35,040
+does not enforce what shape your data
+
+88
+00:03:35,040 --> 00:03:37,760
+has, what types your variables are or
+
+89
+00:03:37,760 --> 00:03:39,440
+what kind of arguments your functions
+
+90
+00:03:39,440 --> 00:03:42,239
+expect. Everything is essentially
+
+91
+00:03:42,239 --> 00:03:46,239
+trusted until runtime and until runtime
+
+92
+00:03:46,239 --> 00:03:48,799
+is the key phrase here. Let me give you
+
+93
+00:03:48,799 --> 00:03:51,680
+a simple example. Imagine you write a
+
+94
+00:03:51,680 --> 00:03:54,319
+function that expects a "user" object and
+
+95
+00:03:54,319 --> 00:03:55,840
+inside that function you access
+
+96
+00:03:55,840 --> 00:03:58,159
+something like "user.name".
+
+97
+00:03:58,159 --> 00:04:00,640
+JavaScript will happily let you do that.
+
+98
+00:04:00,640 --> 00:04:03,040
+It will not complain. It will not warn
+
+99
+00:04:03,040 --> 00:04:04,959
+you. It assumes you know what you're
+
+100
+00:04:04,959 --> 00:04:07,760
+doing. But if somewhere else in your
+
+101
+00:04:07,760 --> 00:04:10,239
+codebase that function is called with
+
+102
+00:04:10,239 --> 00:04:12,799
+something that is almost a user but not
+
+103
+00:04:12,799 --> 00:04:15,439
+quite, your program doesn't fail
+
+104
+00:04:15,439 --> 00:04:18,160
+immediately. It fails later, possibly in
+
+105
+00:04:18,160 --> 00:04:20,880
+production, possibly for a user,
+
+106
+00:04:20,880 --> 00:04:22,639
+possibly in a part of the application
+
+107
+00:04:22,639 --> 00:04:25,520
+that's very hard to debug. And that is
+
+108
+00:04:25,520 --> 00:04:28,400
+the core issue. JavaScript errors are
+
+109
+00:04:28,400 --> 00:04:30,880
+often delayed.
+
+110
+00:04:30,880 --> 00:04:33,680
+In small scripts, that's not a big deal.
+
+111
+00:04:33,680 --> 00:04:36,000
+You see the error, you fix it, you move
+
+112
+00:04:36,000 --> 00:04:38,639
+on. But as applications grow, more
+
+113
+00:04:38,639 --> 00:04:42,240
+files, more developers, more features,
+
+114
+00:04:42,240 --> 00:04:45,440
+that delay becomes extremely expensive.
+
+115
+00:04:45,440 --> 00:04:47,440
+Another common issue is function
+
+116
+00:04:47,440 --> 00:04:50,320
+arguments. In JavaScript, you can call a
+
+117
+00:04:50,320 --> 00:04:52,960
+function with too many arguments or too
+
+118
+00:04:52,960 --> 00:04:55,840
+few arguments or arguments of the wrong
+
+119
+00:04:55,840 --> 00:04:59,280
+shape and JavaScript will not stop you.
+
+120
+00:04:59,280 --> 00:05:01,840
+Again, it assumes you know what
+
+121
+00:05:01,840 --> 00:05:05,040
+you're doing. This means your codebase
+
+122
+00:05:05,040 --> 00:05:07,680
+has an implicit contract, but that
+
+123
+00:05:07,680 --> 00:05:10,639
+contract only exists in your head or
+
+124
+00:05:10,639 --> 00:05:14,560
+maybe in a comment or maybe not at all.
+
+125
+00:05:14,560 --> 00:05:17,520
+Now, let's talk about refactoring.
+
+126
+00:05:17,520 --> 00:05:19,120
+Refactoring JavaScript code without
+
+127
+00:05:19,120 --> 00:05:20,800
+types often feels like walking through a
+
+128
+00:05:20,800 --> 00:05:22,240
+dark room and hoping you don't hit
+
+129
+00:05:22,240 --> 00:05:24,880
+anything. You rename a variable, you
+
+130
+00:05:24,880 --> 00:05:26,639
+move a function, you change the return
+
+131
+00:05:26,639 --> 00:05:28,960
+type, and hope you didn't break
+
+132
+00:05:28,960 --> 00:05:31,120
+anything. The only way to know for sure
+
+133
+00:05:31,120 --> 00:05:33,600
+is to run the application and manually
+
+134
+00:05:33,600 --> 00:05:36,560
+test every possible path or to rely
+
+135
+00:05:36,560 --> 00:05:39,039
+heavily on tests.
+
+136
+00:05:39,039 --> 00:05:41,600
+And tests are important, but tests alone
+
+137
+00:05:41,600 --> 00:05:43,919
+do not solve this problem.
+
+138
+00:05:43,919 --> 00:05:46,320
+Tests can tell you something is broken
+
+139
+00:05:46,320 --> 00:05:49,360
+after you write the code. They cannot
+
+140
+00:05:49,360 --> 00:05:51,759
+give you continuous real-time feedback
+
+141
+00:05:51,759 --> 00:05:54,000
+while you're typing. They don't help
+
+142
+00:05:54,000 --> 00:05:56,560
+your editor understand your code. They
+
+143
+00:05:56,560 --> 00:05:58,800
+don't help with autocomplete or safe
+
+144
+00:05:58,800 --> 00:06:01,520
+refactoring or documentation.
+
+145
+00:06:01,520 --> 00:06:03,520
+Another issue shows up when working in
+
+146
+00:06:03,520 --> 00:06:06,400
+teams. When multiple developers work on
+
+147
+00:06:06,400 --> 00:06:08,000
+the same JavaScript codebase, you start
+
+148
+00:06:08,000 --> 00:06:11,360
+relying on conventions and assumptions.
+
+149
+00:06:11,360 --> 00:06:12,880
+You assume that a function returns a
+
+150
+00:06:12,880 --> 00:06:15,199
+certain shape. You assume an object has
+
+151
+00:06:15,199 --> 00:06:17,199
+a certain property. And as the code
+
+152
+00:06:17,199 --> 00:06:19,600
+evolves, those assumptions slowly drift
+
+153
+00:06:19,600 --> 00:06:22,479
+away from reality. This is how bugs are
+
+154
+00:06:22,479 --> 00:06:24,319
+born. Not because developers are
+
+155
+00:06:24,319 --> 00:06:26,400
+careless, but because the language
+
+156
+00:06:26,400 --> 00:06:27,919
+doesn't help enforce shared
+
+157
+00:06:27,919 --> 00:06:29,440
+understanding.
+
+158
+00:06:29,440 --> 00:06:32,639
+And finally, there's the issue of scale.
+
+159
+00:06:32,639 --> 00:06:34,960
+JavaScript scales very well in terms of
+
+160
+00:06:34,960 --> 00:06:37,440
+what you can build with it, but is does
+
+161
+00:06:37,440 --> 00:06:40,000
+not scale well in terms of maintaining
+
+162
+00:06:40,000 --> 00:06:43,680
+correctness as complexity increases. The
+
+163
+00:06:43,680 --> 00:06:46,240
+more states, branches, and data
+
+164
+00:06:46,240 --> 00:06:48,560
+transformations you have, the harder it
+
+165
+00:06:48,560 --> 00:06:50,240
+becomes to reason about what your code
+
+166
+00:06:50,240 --> 00:06:53,360
+is doing at any given moment. So to be
+
+167
+00:06:53,360 --> 00:06:56,880
+clear, JavaScript is not bad.
+
+168
+00:06:56,880 --> 00:06:58,560
+These are not design flaws in the
+
+169
+00:06:58,560 --> 00:07:00,880
+traditional sense. JavaScript was
+
+170
+00:07:00,880 --> 00:07:03,039
+designed to be permissive, fast to
+
+171
+00:07:03,039 --> 00:07:05,599
+write, and accessible. But modern
+
+172
+00:07:05,599 --> 00:07:07,680
+applications, especially React and React
+
+173
+00:07:07,680 --> 00:07:09,680
+Native applications, are large,
+
+174
+00:07:09,680 --> 00:07:13,280
+stateful, and long lived. And they need
+
+175
+00:07:13,280 --> 00:07:15,680
+stronger guarantees than JavaScript
+
+176
+00:07:15,680 --> 00:07:18,400
+alone can provide. And this is exactly
+
+177
+00:07:18,400 --> 00:07:22,080
+the gap that TS was created to fill. not
+
+178
+00:07:22,080 --> 00:07:24,560
+by replacing JavaScript, but by changing
+
+179
+00:07:24,560 --> 00:07:27,120
+how it runs, but by adding a layer of
+
+180
+00:07:27,120 --> 00:07:30,160
+safety, clarity, and early feedback
+
+181
+00:07:30,160 --> 00:07:33,360
+before your code ever reaches a browser
+
+182
+00:07:33,360 --> 00:07:37,440
+or a device. So, now that we've clearly
+
+183
+00:07:37,440 --> 00:07:39,680
+defined the problem, we can talk about
+
+184
+00:07:39,680 --> 00:07:42,240
+what TypeScript actually is, what it
+
+185
+00:07:42,240 --> 00:07:45,199
+does, and just as importantly, what it
+
+186
+00:07:45,199 --> 00:07:48,000
+does not do.
+
+187
+00:07:48,000 --> 00:07:49,919
+Now that we talked about the problems we
+
+188
+00:07:49,919 --> 00:07:52,960
+run into with JavaScript at scale, let's
+
+189
+00:07:52,960 --> 00:07:55,440
+talk about what Typescript actually is.
+
+190
+00:07:55,440 --> 00:07:56,960
+Because there are a lot of
+
+191
+00:07:56,960 --> 00:07:59,759
+misunderstandings around this. The first
+
+192
+00:07:59,759 --> 00:08:01,680
+and most important thing to understand
+
+193
+00:08:01,680 --> 00:08:05,520
+is this. TypeScript is not a new
+
+194
+00:08:05,520 --> 00:08:08,560
+runtime. Typescript does not change how
+
+195
+00:08:08,560 --> 00:08:11,280
+your code executes. It does not add
+
+196
+00:08:11,280 --> 00:08:13,840
+features to JavaScript engine. and
+
+197
+00:08:13,840 --> 00:08:16,319
+browsers do not understand TypeScript at
+
+198
+00:08:16,319 --> 00:08:19,840
+all. TypeScript exists entirely at
+
+199
+00:08:19,840 --> 00:08:23,360
+development time. What that means is
+
+200
+00:08:23,360 --> 00:08:25,840
+TypeScript's jobs is to analyze your
+
+201
+00:08:25,840 --> 00:08:29,840
+code before it runs and tell you whether
+
+202
+00:08:29,840 --> 00:08:31,680
+what you wrote makes sense according to
+
+203
+00:08:31,680 --> 00:08:34,959
+the types you described or the types it
+
+204
+00:08:34,959 --> 00:08:38,000
+can infer. When you write TypeScript,
+
+205
+00:08:38,000 --> 00:08:40,320
+you're still writing JavaScript. You're
+
+206
+00:08:40,320 --> 00:08:42,640
+just writing JavaScript with additional
+
+207
+00:08:42,640 --> 00:08:45,360
+information attached to it. Information
+
+208
+00:08:45,360 --> 00:08:47,920
+that describes the shape of your data,
+
+209
+00:08:47,920 --> 00:08:50,000
+the inputs and outputs of your
+
+210
+00:08:50,000 --> 00:08:52,720
+functions, and the contracts between
+
+211
+00:08:52,720 --> 00:08:55,519
+different parts of your code. At some
+
+212
+00:08:55,519 --> 00:08:58,720
+point, TypeScript takes your ".ts" files
+
+213
+00:08:58,720 --> 00:09:02,080
+and converts them into plain ".js" files.
+
+214
+00:09:02,080 --> 00:09:05,279
+This process is called compilation or
+
+215
+00:09:05,279 --> 00:09:08,399
+transpilation. And once that happens,
+
+216
+00:09:08,399 --> 00:09:11,440
+every trace of TypeScript is gone. There
+
+217
+00:09:11,440 --> 00:09:13,760
+are no types at runtime. There are no
+
+218
+00:09:13,760 --> 00:09:15,680
+TypeScript checking happening in the
+
+219
+00:09:15,680 --> 00:09:19,200
+browser or on the device. What actually
+
+220
+00:09:19,200 --> 00:09:22,160
+runs is just JavaScript.
+
+221
+00:09:22,160 --> 00:09:24,160
+This is extremely important to
+
+222
+00:09:24,160 --> 00:09:27,360
+internalize because it explains both the
+
+223
+00:09:27,360 --> 00:09:31,600
+power and the limitations of TypeScript.
+
+224
+00:09:31,600 --> 00:09:34,640
+For example, Typescript cannot prevent a
+
+225
+00:09:34,640 --> 00:09:37,839
+bug that depends on real runtime data
+
+226
+00:09:37,839 --> 00:09:39,680
+like a network request returning
+
+227
+00:09:39,680 --> 00:09:42,880
+unexpected values. If your assumptions
+
+228
+00:09:42,880 --> 00:09:46,160
+are wrong, TypeScript will trust you. It
+
+229
+00:09:46,160 --> 00:09:48,399
+cannot magically validate data coming
+
+230
+00:09:48,399 --> 00:09:51,920
+from the outside world. TypeScript is a
+
+231
+00:09:51,920 --> 00:09:55,040
+static type system, not a runtime
+
+232
+00:09:55,040 --> 00:09:56,560
+validator.
+
+233
+00:09:56,560 --> 00:09:58,880
+A strength is in catching mistakes that
+
+234
+00:09:58,880 --> 00:10:01,360
+are already visible in your code.
+
+235
+00:10:01,360 --> 00:10:03,680
+Calling a function incorrectly,
+
+236
+00:10:03,680 --> 00:10:06,320
+accessing properties that don't exist,
+
+237
+00:10:06,320 --> 00:10:09,120
+forgetting to handle certain cases, or
+
+238
+00:10:09,120 --> 00:10:11,120
+passing the wrong shape of data between
+
+239
+00:10:11,120 --> 00:10:13,040
+components.
+
+240
+00:10:13,040 --> 00:10:14,880
+Another common misconception is that
+
+241
+00:10:14,880 --> 00:10:16,800
+TypeScript forces you to write a lot of
+
+242
+00:10:16,800 --> 00:10:19,839
+types everywhere. In reality, one of
+
+243
+00:10:19,839 --> 00:10:22,240
+TypeScript's biggest strength is type
+
+244
+00:10:22,240 --> 00:10:25,440
+inference. In many cases, you don't need
+
+245
+00:10:25,440 --> 00:10:28,320
+to write types at all. TypeScript can
+
+246
+00:10:28,320 --> 00:10:30,560
+look at your code and figure out what
+
+247
+00:10:30,560 --> 00:10:33,120
+types are involved automatically.
+
+248
+00:10:33,120 --> 00:10:35,360
+Types are not meant to be noise. They're
+
+249
+00:10:35,360 --> 00:10:38,240
+meant to be signals added where they
+
+250
+00:10:38,240 --> 00:10:40,640
+increase clarity and removed where they
+
+251
+00:10:40,640 --> 00:10:43,360
+add no value. It's also important to
+
+252
+00:10:43,360 --> 00:10:46,160
+understand that TypeScript is not about
+
+253
+00:10:46,160 --> 00:10:48,560
+making your code more correct in the
+
+254
+00:10:48,560 --> 00:10:51,600
+logical sense. You can still write code
+
+255
+00:10:51,600 --> 00:10:53,440
+that compiles perfectly and is
+
+256
+00:10:53,440 --> 00:10:56,560
+completely wrong. What TypeScript give
+
+257
+00:10:56,560 --> 00:10:58,880
+you is confidence.
+
+258
+00:10:58,880 --> 00:11:00,640
+Confidence that when you change
+
+259
+00:11:00,640 --> 00:11:03,600
+something, the compiler will tell you
+
+260
+00:11:03,600 --> 00:11:06,079
+what else needs to be updated.
+
+261
+00:11:06,079 --> 00:11:07,839
+Confidence that when you call a
+
+262
+00:11:07,839 --> 00:11:10,240
+function, you're using it the way it was
+
+263
+00:11:10,240 --> 00:11:13,200
+designed to be used. And confidence that
+
+264
+00:11:13,200 --> 00:11:15,120
+your editor actually understands your
+
+265
+00:11:15,120 --> 00:11:18,240
+code. In that sense, TypeScript acts
+
+266
+00:11:18,240 --> 00:11:21,120
+like a very fast, very strict reviewer
+
+267
+00:11:21,120 --> 00:11:23,680
+that looks at your code every time you
+
+268
+00:11:23,680 --> 00:11:27,360
+save a file. So to summarize this
+
+269
+00:11:27,360 --> 00:11:30,480
+section, TypeScript is JavaScript with a
+
+270
+00:11:30,480 --> 00:11:34,160
+static type system. It runs at compile
+
+271
+00:11:34,160 --> 00:11:38,640
+time, not at runtime. It adds safety and
+
+272
+00:11:38,640 --> 00:11:42,560
+clarity, but not magic. and it exists to
+
+273
+00:11:42,560 --> 00:11:45,040
+help you catch mistakes before your code
+
+274
+00:11:45,040 --> 00:11:46,800
+ever runs.
+
+275
+00:11:46,800 --> 00:11:48,880
+With that mental model in place, we can
+
+276
+00:11:48,880 --> 00:11:50,800
+now look at how Typescript actually
+
+277
+00:11:50,800 --> 00:11:53,200
+helps us day-to-day through better
+
+278
+00:11:53,200 --> 00:11:56,160
+tooling, better feedback, and a smoother
+
+279
+00:11:56,160 --> 00:11:58,399
+development experience.
+
+280
+00:11:58,399 --> 00:12:00,640
+Now that we understand what TypeScript
+
+281
+00:12:00,640 --> 00:12:03,440
+is and what it is not, the next question
+
+282
+00:12:03,440 --> 00:12:05,760
+is why does this actually matter in
+
+283
+00:12:05,760 --> 00:12:08,240
+practice? Because when people hear
+
+284
+00:12:08,240 --> 00:12:10,800
+types, they often think about rules,
+
+285
+00:12:10,800 --> 00:12:13,279
+restrictions, or extra work. But the
+
+286
+00:12:13,279 --> 00:12:16,240
+real value of Typescript is not types
+
+287
+00:12:16,240 --> 00:12:18,959
+themselves. It's the feedback you get
+
+288
+00:12:18,959 --> 00:12:21,040
+while you're writing code. Think of
+
+289
+00:12:21,040 --> 00:12:24,240
+Typescript as a developer tool, not as a
+
+290
+00:12:24,240 --> 00:12:26,560
+language feature. One of the biggest
+
+291
+00:12:26,560 --> 00:12:29,519
+advantages of type safety is early error
+
+292
+00:12:29,519 --> 00:12:32,000
+detection. Instead of discovering
+
+293
+00:12:32,000 --> 00:12:33,760
+problems at runtime, maybe in
+
+294
+00:12:33,760 --> 00:12:36,399
+production, maybe from a user,
+
+295
+00:12:36,399 --> 00:12:38,560
+TypeScript surfaces those problems
+
+296
+00:12:38,560 --> 00:12:40,399
+immediately while you're still in your
+
+297
+00:12:40,399 --> 00:12:43,600
+editor. The feedback loop is incredibly
+
+298
+00:12:43,600 --> 00:12:45,760
+tight. You write a line of code and
+
+299
+00:12:45,760 --> 00:12:48,240
+within milliseconds, the compiler or
+
+300
+00:12:48,240 --> 00:12:50,639
+your editor tells you whether that line
+
+301
+00:12:50,639 --> 00:12:53,839
+makes sense. This changes how you work.
+
+302
+00:12:53,839 --> 00:12:56,000
+For example, when you call a function in
+
+303
+00:12:56,000 --> 00:12:58,320
+JavaScript, you're relying on memory,
+
+304
+00:12:58,320 --> 00:13:01,519
+documentation, or comments to know how
+
+305
+00:13:01,519 --> 00:13:03,360
+the function should be used. With
+
+306
+00:13:03,360 --> 00:13:05,680
+TypeScript, the function itself tells
+
+307
+00:13:05,680 --> 00:13:08,320
+you. Your editor can show you exactly
+
+308
+00:13:08,320 --> 00:13:10,399
+what arguments are expected and what the
+
+309
+00:13:10,399 --> 00:13:13,519
+function returns. This means fewer
+
+310
+00:13:13,519 --> 00:13:15,839
+context switches. You don't have to jump
+
+311
+00:13:15,839 --> 00:13:18,639
+between files as often. You don't have
+
+312
+00:13:18,639 --> 00:13:20,800
+to guess. The information is right
+
+313
+00:13:20,800 --> 00:13:23,600
+there. Another major benefit is
+
+314
+00:13:23,600 --> 00:13:26,880
+autocomplete and intellisense.
+
+315
+00:13:26,880 --> 00:13:29,360
+This might sound like a small thing, but
+
+316
+00:13:29,360 --> 00:13:32,079
+it's not. When your editor understands
+
+317
+00:13:32,079 --> 00:13:34,880
+the shape of your data, it can guide you
+
+318
+00:13:34,880 --> 00:13:37,600
+as you type. It can suggest valid
+
+319
+00:13:37,600 --> 00:13:41,519
+properties, catches typos instantly, and
+
+320
+00:13:41,519 --> 00:13:43,760
+prevent entire classes of bugs before
+
+321
+00:13:43,760 --> 00:13:47,680
+they exist. Over time, this dramatically
+
+322
+00:13:47,680 --> 00:13:50,560
+reduces cognitive load. You spend less
+
+323
+00:13:50,560 --> 00:13:53,360
+energy remembering details and more
+
+324
+00:13:53,360 --> 00:13:55,920
+energy thinking about actual logic and
+
+325
+00:13:55,920 --> 00:13:57,519
+design.
+
+326
+00:13:57,519 --> 00:13:59,519
+Type safety also shines when it comes to
+
+327
+00:13:59,519 --> 00:14:01,839
+refactoring. In a large JavaScript
+
+328
+00:14:01,839 --> 00:14:04,639
+codebase, refactoring can be stressful.
+
+329
+00:14:04,639 --> 00:14:06,959
+You change a function signature or
+
+330
+00:14:06,959 --> 00:14:09,760
+rename a property and you're never quite
+
+331
+00:14:09,760 --> 00:14:12,000
+sure what you've broken. You rely on
+
+332
+00:14:12,000 --> 00:14:15,920
+tests, manual testing, or hope. With
+
+333
+00:14:15,920 --> 00:14:18,320
+Typescript, refactoring becomes much
+
+334
+00:14:18,320 --> 00:14:20,959
+more mechanical. You make a change and
+
+335
+00:14:20,959 --> 00:14:23,279
+the compiler tells you everywhere that
+
+336
+00:14:23,279 --> 00:14:25,600
+change has an impact. It turns
+
+337
+00:14:25,600 --> 00:14:27,920
+refactoring from a risky activity into a
+
+338
+00:14:27,920 --> 00:14:30,399
+guided process. This is especially
+
+339
+00:14:30,399 --> 00:14:32,160
+important in React and React Native
+
+340
+00:14:32,160 --> 00:14:33,839
+applications where data flows through
+
+341
+00:14:33,839 --> 00:14:37,440
+many components. Types act as contracts
+
+342
+00:14:37,440 --> 00:14:39,839
+between those components. When a
+
+343
+00:14:39,839 --> 00:14:42,079
+contract changes, TypeScript makes sure
+
+344
+00:14:42,079 --> 00:14:44,480
+both sides are updated.
+
+345
+00:14:44,480 --> 00:14:46,399
+Another underrated benefit is
+
+346
+00:14:46,399 --> 00:14:49,279
+self-documenting code. Good Typescript
+
+347
+00:14:49,279 --> 00:14:50,880
+types often remove the need for a
+
+348
+00:14:50,880 --> 00:14:52,880
+comments. When you see a function
+
+349
+00:14:52,880 --> 00:14:55,680
+signature or a components props, you
+
+350
+00:14:55,680 --> 00:14:57,199
+immediately understand how it's supposed
+
+351
+00:14:57,199 --> 00:15:00,399
+to be used. This is invaluable, not just
+
+352
+00:15:00,399 --> 00:15:01,920
+for other developers, but for your
+
+353
+00:15:01,920 --> 00:15:04,399
+future self. And this is where
+
+354
+00:15:04,399 --> 00:15:06,240
+Typescript really starts to feel
+
+355
+00:15:06,240 --> 00:15:08,959
+empowering rather than restrictive.
+
+356
+00:15:08,959 --> 00:15:10,720
+Instead of guessing whether something is
+
+357
+00:15:10,720 --> 00:15:14,000
+safe, you know, instead of hoping you
+
+358
+00:15:14,000 --> 00:15:15,600
+didn't break something, you can verify
+
+359
+00:15:15,600 --> 00:15:18,000
+it. The compiler becomes a partner in
+
+360
+00:15:18,000 --> 00:15:20,800
+development, not an obstacle.
+
+361
+00:15:20,800 --> 00:15:22,959
+Of course, this doesn't mean TypeScript
+
+362
+00:15:22,959 --> 00:15:26,000
+eliminates all bugs. Logical errors
+
+363
+00:15:26,000 --> 00:15:28,639
+still exist. Runtime data can still
+
+364
+00:15:28,639 --> 00:15:30,320
+surprise you, but TypeScript
+
+365
+00:15:30,320 --> 00:15:32,079
+dramatically reduces the surface area
+
+366
+00:15:32,079 --> 00:15:34,720
+for mistakes that come from misuse,
+
+367
+00:15:34,720 --> 00:15:37,040
+misunderstanding, or inconsistent
+
+368
+00:15:37,040 --> 00:15:38,560
+assumptions.
+
+369
+00:15:38,560 --> 00:15:41,040
+So, when we talk about type safety,
+
+370
+00:15:41,040 --> 00:15:43,040
+we're not talking about perfection.
+
+371
+00:15:43,040 --> 00:15:45,440
+We're talking about leverage.
+
+372
+00:15:45,440 --> 00:15:47,360
+Typescript gives you leverage over
+
+373
+00:15:47,360 --> 00:15:49,519
+complexity. It helps your tools
+
+374
+00:15:49,519 --> 00:15:51,680
+understand your code and it lets you
+
+375
+00:15:51,680 --> 00:15:54,399
+move faster with more confidence as your
+
+376
+00:15:54,399 --> 00:15:57,279
+applications grow. And now that we've
+
+377
+00:15:57,279 --> 00:15:59,680
+seen the value TypeScript provides as a
+
+378
+00:15:59,680 --> 00:16:01,440
+developer tool, it's time to get
+
+379
+00:16:01,440 --> 00:16:02,880
+practical and start setting up the
+
+380
+00:16:02,880 --> 00:16:04,399
+environment that will support us
+
+381
+00:16:04,399 --> 00:16:07,920
+throughout the rest of the series.
+
+382
+00:16:07,920 --> 00:16:09,440
+So far, everything we've talked about
+
+383
+00:16:09,440 --> 00:16:11,920
+has been conceptual. We've talked about
+
+384
+00:16:11,920 --> 00:16:14,160
+Typescript(TS) as a developer tool, about
+
+385
+00:16:14,160 --> 00:16:17,360
+early feedback, about catching mistakes
+
+386
+00:16:17,360 --> 00:16:19,839
+before they reach production. Now, we
+
+387
+00:16:19,839 --> 00:16:21,199
+need to talk about the environment that
+
+388
+00:16:21,199 --> 00:16:23,360
+all of this actually runs on. Because
+
+389
+00:16:23,360 --> 00:16:26,480
+before we can write TypeScript, before
+
+390
+00:16:26,480 --> 00:16:28,959
+we can run the compilers, before we can
+
+391
+00:16:28,959 --> 00:16:32,959
+use tools like "npm" or "ts-node", we need
+
+392
+00:16:32,959 --> 00:16:35,199
+Node.js.
+
+393
+00:16:35,199 --> 00:16:37,120
+JavaScript was originally designed to
+
+394
+00:16:37,120 --> 00:16:39,759
+run in the browser. That's it. Node.js
+
+395
+00:16:39,759 --> 00:16:41,759
+JS is what allows JavaScript to run
+
+396
+00:16:41,759 --> 00:16:44,399
+outside the browser on your computer on
+
+397
+00:16:44,399 --> 00:16:47,120
+servers and inside developer tooling.
+
+398
+00:16:47,120 --> 00:16:49,519
+When you run things like npm, npx,
+
+399
+00:16:49,519 --> 00:16:52,000
+typescript, build tools, and test
+
+400
+00:16:52,000 --> 00:16:53,759
+runners, you're not using browser
+
+401
+00:16:53,759 --> 00:16:56,320
+JavaScript. You're using Node.js. So,
+
+402
+00:16:56,320 --> 00:16:59,519
+Node.js is a JavaScript runtime built on
+
+403
+00:16:59,519 --> 00:17:01,839
+top of the V8 engine and absolutely
+
+404
+00:17:01,839 --> 00:17:03,600
+foundational to modern JavaScript and
+
+405
+00:17:03,600 --> 00:17:05,600
+TypeScript development. If you're
+
+406
+00:17:05,600 --> 00:17:07,520
+learning TypeScript, React or React
+
+407
+00:17:07,520 --> 00:17:10,000
+Native, Node.js JS is not optional. It's
+
+408
+00:17:10,000 --> 00:17:12,000
+part of the ground you're standing on.
+
+409
+00:17:12,000 --> 00:17:13,600
+Here's the part that often causes
+
+410
+00:17:13,600 --> 00:17:15,919
+problems for beginners. There isn't just
+
+411
+00:17:15,919 --> 00:17:17,679
+one version of Node. There are many
+
+412
+00:17:17,679 --> 00:17:19,280
+versions, older versions, and
+
+413
+00:17:19,280 --> 00:17:21,360
+experimental versions. And different
+
+414
+00:17:21,360 --> 00:17:23,600
+projects expect different node versions.
+
+415
+00:17:23,600 --> 00:17:25,839
+A project might say this requires Node
+
+416
+00:17:25,839 --> 00:17:28,400
+version 18. Another might say version
+
+417
+00:17:28,400 --> 00:17:30,960
+20. If you only have one global node
+
+418
+00:17:30,960 --> 00:17:33,120
+installation, this quickly becomes
+
+419
+00:17:33,120 --> 00:17:34,640
+painful.
+
+420
+00:17:34,640 --> 00:17:36,960
+This is where NVM comes in. NVM stands
+
+421
+00:17:36,960 --> 00:17:39,200
+for node version manager. NVM lets you
+
+422
+00:17:39,200 --> 00:17:40,960
+install multiple versions of node,
+
+423
+00:17:40,960 --> 00:17:43,360
+switch between them easily and match the
+
+424
+00:17:43,360 --> 00:17:45,679
+node version a project expects. Instead
+
+425
+00:17:45,679 --> 00:17:47,280
+of fighting your system installation of
+
+426
+00:17:47,280 --> 00:17:50,160
+node, NVM puts you in control. This is
+
+427
+00:17:50,160 --> 00:17:52,480
+not an advanced tool. This is a baseline
+
+428
+00:17:52,480 --> 00:17:55,200
+professional tool. So the correct way to
+
+429
+00:17:55,200 --> 00:17:57,679
+do this is first install NVM then use
+
+430
+00:17:57,679 --> 00:18:00,720
+NVM to install Node.js. That way Node is
+
+431
+00:18:00,720 --> 00:18:02,559
+managed from day one. switching versions
+
+432
+00:18:02,559 --> 00:18:04,799
+later is trivial and you avoid a whole
+
+433
+00:18:04,799 --> 00:18:07,120
+class of environment issues. This is
+
+434
+00:18:07,120 --> 00:18:08,960
+exactly how we're going to do it in this
+
+435
+00:18:08,960 --> 00:18:10,559
+video.
+
+436
+00:18:10,559 --> 00:18:12,240
+So in this section, we're going to do
+
+437
+00:18:12,240 --> 00:18:15,200
+three things. Install NVM, use NVM to
+
+438
+00:18:15,200 --> 00:18:17,520
+see which Node versions are available,
+
+439
+00:18:17,520 --> 00:18:20,160
+and install the latest or LTS version of
+
+440
+00:18:20,160 --> 00:18:23,280
+Node. No TypeScript yet, no React yet,
+
+441
+00:18:23,280 --> 00:18:25,919
+just setting a solid foundation. You'll
+
+442
+00:18:25,919 --> 00:18:28,320
+see the term LTS come up a lot. LTS
+
+443
+00:18:28,320 --> 00:18:31,280
+stands for long-term support and LTS
+
+444
+00:18:31,280 --> 00:18:33,840
+version of node is stable and widely
+
+445
+00:18:33,840 --> 00:18:36,320
+supported and is recommended for real
+
+446
+00:18:36,320 --> 00:18:38,640
+world development. For learning and
+
+447
+00:18:38,640 --> 00:18:40,720
+professional work, you almost always
+
+448
+00:18:40,720 --> 00:18:43,200
+want the LTS version, not the newest
+
+449
+00:18:43,200 --> 00:18:45,200
+experimental releases. That's the
+
+450
+00:18:45,200 --> 00:18:48,240
+version we're going to install. So in
+
+451
+00:18:48,240 --> 00:18:50,400
+here, as you can see, we found NVM on
+
+452
+00:18:50,400 --> 00:18:52,720
+GitHub. Scroll down a little bit until
+
+453
+00:18:52,720 --> 00:18:55,039
+you get to the installation section.
+
+454
+00:18:55,039 --> 00:18:58,000
+Copy the curl command and paste it in
+
+455
+00:18:58,000 --> 00:19:00,720
+your terminal.
+
+456
+00:19:00,720 --> 00:19:03,120
+After doing this, you should be able to
+
+457
+00:19:03,120 --> 00:19:04,799
+issue any command that has to do with
+
+458
+00:19:04,799 --> 00:19:10,120
+NVM, such as just NVM. As you just saw,
+
+459
+00:19:10,400 --> 00:19:12,480
+you should also be able to list the
+
+460
+00:19:12,480 --> 00:19:17,240
+available Node versions on your system,
+
+461
+00:19:18,240 --> 00:19:21,919
+and you can also install the long-term
+
+462
+00:19:21,919 --> 00:19:26,000
+support version of Node.
+
+463
+00:19:26,080 --> 00:19:27,919
+Once node is installed on your computer,
+
+464
+00:19:27,919 --> 00:19:29,840
+you should be able to use the npm
+
+465
+00:19:29,840 --> 00:19:31,440
+command, which is node package manager
+
+466
+00:19:31,440 --> 00:19:33,600
+to install TypeScript globally on your
+
+467
+00:19:33,600 --> 00:19:36,960
+computer with the command npm install -g
+
+468
+00:19:36,960 --> 00:19:38,799
+typescript as you can see on the screen.
+
+469
+00:19:38,799 --> 00:19:40,160
+After doing that, you should be able to
+
+470
+00:19:40,160 --> 00:19:42,720
+use mpxtsc
+
+471
+00:19:42,720 --> 00:19:45,120
+as you can see on the screen in order to
+
+472
+00:19:45,120 --> 00:19:46,960
+get the version of the typescript
+
+473
+00:19:46,960 --> 00:19:49,760
+compiler. So let's go ahead and create a
+
+474
+00:19:49,760 --> 00:19:51,520
+folder with terminal. I've created a
+
+475
+00:19:51,520 --> 00:19:53,520
+folder called "learningts" and then I'm
+
+476
+00:19:53,520 --> 00:19:56,320
+going to open visual studio code.
+
+477
+00:19:56,320 --> 00:19:57,440
+So the first thing that we're going to
+
+478
+00:19:57,440 --> 00:19:59,919
+do is create a new terminal and in there
+
+479
+00:19:59,919 --> 00:20:02,080
+we're going to init or initialize a new
+
+480
+00:20:02,080 --> 00:20:04,240
+typescript project. As you can see we
+
+481
+00:20:04,240 --> 00:20:06,320
+then get a tsconfig json file which
+
+482
+00:20:06,320 --> 00:20:07,360
+we're going to go through a little bit
+
+483
+00:20:07,360 --> 00:20:09,200
+more in details later but for now just
+
+484
+00:20:09,200 --> 00:20:11,120
+know that this creates a new typescript
+
+485
+00:20:11,120 --> 00:20:13,840
+project for us. The next step is to
+
+486
+00:20:13,840 --> 00:20:16,160
+install three important dependencies for
+
+487
+00:20:16,160 --> 00:20:17,760
+our project. In this project, we just
+
+488
+00:20:17,760 --> 00:20:20,320
+want to be able to run our TypeScript
+
+489
+00:20:20,320 --> 00:20:21,840
+code and have it compile and watch
+
+490
+00:20:21,840 --> 00:20:23,919
+automatically. So you can see installing
+
+491
+00:20:23,919 --> 00:20:26,320
+nodemon ts-node and typescript as
+
+492
+00:20:26,320 --> 00:20:28,400
+developer dependencies.
+
+493
+00:20:28,400 --> 00:20:29,360
+Then we're going to create a
+
+494
+00:20:29,360 --> 00:20:31,039
+nodemon.json
+
+495
+00:20:31,039 --> 00:20:33,679
+and nodemon.json file is going to allow
+
+496
+00:20:33,679 --> 00:20:37,919
+us then to control how the automatic
+
+497
+00:20:37,919 --> 00:20:39,600
+compilation is going to work. As we'll
+
+498
+00:20:39,600 --> 00:20:42,240
+see soon, we create a folder called src
+
+499
+00:20:42,240 --> 00:20:45,520
+index.ts file in there and write the code
+
+500
+00:20:45,520 --> 00:20:47,280
+that we want to write. For now, it's not
+
+501
+00:20:47,280 --> 00:20:49,120
+so important. It's just a console log.
+
+502
+00:20:49,120 --> 00:20:50,880
+It's very easy. It's just a log to the
+
+503
+00:20:50,880 --> 00:20:55,039
+output. And then we run npx tsc
+
+504
+00:20:55,039 --> 00:20:57,679
+uh in order to compile the code and
+
+505
+00:20:57,679 --> 00:21:02,480
+create a new uh compile js file. In the
+
+506
+00:21:02,480 --> 00:21:04,720
+nodemonjson file, we're going to write
+
+507
+00:21:04,720 --> 00:21:06,720
+the file that we're going to watch. So
+
+508
+00:21:06,720 --> 00:21:08,720
+any changes made to that file are going
+
+509
+00:21:08,720 --> 00:21:11,840
+to trigger this script that we're
+
+510
+00:21:11,840 --> 00:21:13,440
+writing in "exec". And as you can see,
+
+511
+00:21:13,440 --> 00:21:16,400
+we're going to compile the src/index.ts
+
+512
+00:21:16,400 --> 00:21:18,559
+file. And then we're going to pass it to
+
+513
+00:21:18,559 --> 00:21:21,760
+ts-node which is then going to run that
+
+514
+00:21:21,760 --> 00:21:24,640
+code for us in the terminal. And we're
+
+515
+00:21:24,640 --> 00:21:27,520
+going to go into our package.json
+
+516
+00:21:27,520 --> 00:21:32,320
+and give a script to uh node. And the
+
+517
+00:21:32,320 --> 00:21:34,240
+script usually is called dev. You can
+
+518
+00:21:34,240 --> 00:21:36,480
+also call start, but dev is usually what
+
+519
+00:21:36,480 --> 00:21:39,840
+we use. H. And this allows us then to
+
+520
+00:21:39,840 --> 00:21:42,000
+run this command in the terminal and say
+
+521
+00:21:42,000 --> 00:21:45,840
+npm rundev. And it's going to basically
+
+522
+00:21:45,840 --> 00:21:49,360
+run nodemon for us using that nodemon
+
+523
+00:21:49,360 --> 00:21:51,600
+json configuration. As you can see, as
+
+524
+00:21:51,600 --> 00:21:53,120
+soon as we change the contents of our
+
+525
+00:21:53,120 --> 00:21:56,320
+index ts file and save the file, then is
+
+526
+00:21:56,320 --> 00:21:58,320
+automatically going to be run for us.
+
+527
+00:21:58,320 --> 00:22:00,400
+Again, let's start with the most
+
+528
+00:22:00,400 --> 00:22:02,240
+important setting in this entire file.
+
+529
+00:22:02,240 --> 00:22:04,880
+strict true. The single flag turns
+
+530
+00:22:04,880 --> 00:22:07,200
+TypeScript from a suggestion engine into
+
+531
+00:22:07,200 --> 00:22:10,000
+an actual safety net. When strict mode
+
+532
+00:22:10,000 --> 00:22:12,960
+is on, TypeScript will complain earlier,
+
+533
+00:22:12,960 --> 00:22:15,120
+complain more often, and force you to be
+
+534
+00:22:15,120 --> 00:22:17,919
+explicit about uncertainty. This can
+
+535
+00:22:17,919 --> 00:22:19,679
+feel annoying at first, but that
+
+536
+00:22:19,679 --> 00:22:22,320
+annoyance is exactly what prevents bugs
+
+537
+00:22:22,320 --> 00:22:25,600
+later. In JavaScript, undefined and null
+
+538
+00:22:25,600 --> 00:22:28,320
+silently flow through your program. In
+
+539
+00:22:28,320 --> 00:22:30,720
+strict TypeScript, you're enforced to
+
+540
+00:22:30,720 --> 00:22:33,520
+acknowledge uncertainty. That means you
+
+541
+00:22:33,520 --> 00:22:35,280
+handle missing values, you handle
+
+542
+00:22:35,280 --> 00:22:37,039
+optional data, and you don't
+
+543
+00:22:37,039 --> 00:22:39,360
+accidentally assume things exist when
+
+544
+00:22:39,360 --> 00:22:41,679
+they don't. This is one of the biggest
+
+545
+00:22:41,679 --> 00:22:44,559
+reasons Typescript scales well. You'll
+
+546
+00:22:44,559 --> 00:22:46,320
+notice that strict actually enables a
+
+547
+00:22:46,320 --> 00:22:48,080
+bunch of smaller checks under the hood
+
+548
+00:22:48,080 --> 00:22:49,760
+if you want to play with it yourself.
+
+549
+00:22:49,760 --> 00:22:52,480
+Things like strict null checks, strict
+
+550
+00:22:52,480 --> 00:22:54,480
+function types, and strict property
+
+551
+00:22:54,480 --> 00:22:56,080
+initialization. We're not going to
+
+552
+00:22:56,080 --> 00:22:58,720
+toggle these individually right now. My
+
+553
+00:22:58,720 --> 00:23:00,559
+recommendation, especially for learning,
+
+554
+00:23:00,559 --> 00:23:03,760
+is simple. Leave strict mode on. If
+
+555
+00:23:03,760 --> 00:23:05,760
+something breaks, that's TypeScript
+
+556
+00:23:05,760 --> 00:23:08,480
+teaching you something. Next, let's talk
+
+557
+00:23:08,480 --> 00:23:10,720
+about target. This controls what version
+
+558
+00:23:10,720 --> 00:23:12,799
+of JavaScript TypeScript outputs.
+
+559
+00:23:12,799 --> 00:23:15,679
+Remember, TypeScript itself never runs.
+
+560
+00:23:15,679 --> 00:23:17,840
+It always turns into JavaScript. So,
+
+561
+00:23:17,840 --> 00:23:19,679
+target answers the question, what kind
+
+562
+00:23:19,679 --> 00:23:22,159
+of JavaScript should I generate? If you
+
+563
+00:23:22,159 --> 00:23:24,480
+target something very old like ES5, the
+
+564
+00:23:24,480 --> 00:23:26,880
+output is very compatible but also more
+
+565
+00:23:26,880 --> 00:23:28,960
+verbose and harder to read. If you
+
+566
+00:23:28,960 --> 00:23:31,360
+target something modern like ES2020 or
+
+567
+00:23:31,360 --> 00:23:33,919
+ES Next, the output is cleaner, smaller,
+
+568
+00:23:33,919 --> 00:23:36,320
+and closer to what you wrote. For
+
+569
+00:23:36,320 --> 00:23:38,640
+learning and modern tooling, we're fine
+
+570
+00:23:38,640 --> 00:23:41,039
+targeting modern JavaScript. Bundlers
+
+571
+00:23:41,039 --> 00:23:43,440
+and environments can handle it. Now,
+
+572
+00:23:43,440 --> 00:23:45,600
+let's talk about module. This option
+
+573
+00:23:45,600 --> 00:23:47,760
+controls how imports and exports are
+
+574
+00:23:47,760 --> 00:23:50,559
+emitted. JavaScript has had multiple
+
+575
+00:23:50,559 --> 00:23:53,520
+module systems over time. CommonJS, ES
+
+576
+00:23:53,520 --> 00:23:56,400
+modules, and others. TypeScript needs to
+
+577
+00:23:56,400 --> 00:23:58,799
+know which one you're targeting. In
+
+578
+00:23:58,799 --> 00:24:00,400
+modern TypeScript projects, especially
+
+579
+00:24:00,400 --> 00:24:03,200
+with React, we generally use ES modules.
+
+580
+00:24:03,200 --> 00:24:05,679
+This aligns with import export, modern
+
+581
+00:24:05,679 --> 00:24:08,400
+bundlers, and modern tooling. Now, let's
+
+582
+00:24:08,400 --> 00:24:10,799
+talk about what tsconfig.json file is
+
+583
+00:24:10,799 --> 00:24:13,200
+not. This file is not a performance
+
+584
+00:24:13,200 --> 00:24:15,520
+tuning file, a list of best practices,
+
+585
+00:24:15,520 --> 00:24:17,440
+or something you tweak constantly. In
+
+586
+00:24:17,440 --> 00:24:19,520
+most projects, you create it once,
+
+587
+00:24:19,520 --> 00:24:21,760
+understand the key ideas, and mostly
+
+588
+00:24:21,760 --> 00:24:24,159
+leave it alone. When people cargo-cult
+
+589
+00:24:24,159 --> 00:24:26,640
+tsconfig.json files, they usually don't
+
+590
+00:24:26,640 --> 00:24:28,880
+know what problems they're solving. Let
+
+591
+00:24:28,880 --> 00:24:30,320
+me quickly call out a few common
+
+592
+00:24:30,320 --> 00:24:33,279
+mistakes in tsconfig.json file. Number
+
+593
+00:24:33,279 --> 00:24:35,120
+one is turning strict mode off to
+
+594
+00:24:35,120 --> 00:24:37,600
+silence errors. This defeats the entire
+
+595
+00:24:37,600 --> 00:24:39,840
+purpose of TypeScript. Number two,
+
+596
+00:24:39,840 --> 00:24:41,760
+copying a massive config file without
+
+597
+00:24:41,760 --> 00:24:44,320
+understanding it. And bigger config
+
+598
+00:24:44,320 --> 00:24:46,240
+files are usually not equal to better
+
+599
+00:24:46,240 --> 00:24:48,640
+configs. And last but not least,
+
+600
+00:24:48,640 --> 00:24:50,799
+assuming TS config affects runtime
+
+601
+00:24:50,799 --> 00:24:53,360
+behavior. It doesn't. It only affects
+
+602
+00:24:53,360 --> 00:24:56,159
+compilation and tooling.
+
+603
+00:24:56,159 --> 00:24:58,080
+This exact same file or a very similar
+
+604
+00:24:58,080 --> 00:25:00,960
+one will exist in any React project,
+
+605
+00:25:00,960 --> 00:25:03,520
+React Native projects, backend services,
+
+606
+00:25:03,520 --> 00:25:05,840
+and shared libraries. The names of the
+
+607
+00:25:05,840 --> 00:25:08,159
+tools change, but this mental model
+
+608
+00:25:08,159 --> 00:25:10,880
+stays exactly the same. Uh remember,
+
+609
+00:25:10,880 --> 00:25:13,360
+TypeScript is not magic. It's just a set
+
+610
+00:25:13,360 --> 00:25:16,799
+of rules and and tsconfig.json is where
+
+611
+00:25:16,799 --> 00:25:19,679
+those rules live. So at this point we've
+
+612
+00:25:19,679 --> 00:25:21,760
+done something important. We've just
+
+613
+00:25:21,760 --> 00:25:23,840
+written a single line of TypeScript code
+
+614
+00:25:23,840 --> 00:25:26,000
+but we've set their rules under which
+
+615
+00:25:26,000 --> 00:25:28,559
+all future code will be written. That's
+
+616
+00:25:28,559 --> 00:25:30,400
+intentional because good tooling
+
+617
+00:25:30,400 --> 00:25:32,080
+decisions up front make learning
+
+618
+00:25:32,080 --> 00:25:34,799
+everything else easier. All right, let's
+
+619
+00:25:34,799 --> 00:25:37,360
+wrap this up. In this first video, we
+
+620
+00:25:37,360 --> 00:25:39,360
+didn't try to be clever. We tried to be
+
+621
+00:25:39,360 --> 00:25:41,679
+correct. We talked about why TypeScript
+
+622
+00:25:41,679 --> 00:25:43,360
+exists. not as a replacement for
+
+623
+00:25:43,360 --> 00:25:45,600
+JavaScript, but as a developer tool that
+
+624
+00:25:45,600 --> 00:25:47,279
+gives us earlier feedback and more
+
+625
+00:25:47,279 --> 00:25:49,679
+confidence. We talked about Node.js
+
+626
+00:25:49,679 --> 00:25:51,679
+runtime that all of this tooling depends
+
+627
+00:25:51,679 --> 00:25:54,080
+on. We installed NVM so we can control
+
+628
+00:25:54,080 --> 00:25:55,840
+our node versions instead of finding
+
+629
+00:25:55,840 --> 00:25:58,320
+them. And we looked at tsconfig.json,
+
+630
+00:25:58,320 --> 00:26:00,080
+which is where we tell TypeScript how
+
+631
+00:26:00,080 --> 00:26:02,799
+seriously to take correctness. If
+
+632
+00:26:02,799 --> 00:26:05,279
+there's one idea I want you to walk away
+
+633
+00:26:05,279 --> 00:26:08,480
+with, it's this. TypeScript is not about
+
+634
+00:26:08,480 --> 00:26:10,880
+writing more code. It's about making
+
+635
+00:26:10,880 --> 00:26:14,080
+incorrect code harder to write. Before
+
+636
+00:26:14,080 --> 00:26:15,520
+watching the next video, I strongly
+
+637
+00:26:15,520 --> 00:26:18,240
+recommend you to do three things. First,
+
+638
+00:26:18,240 --> 00:26:19,840
+make sure your environment actually
+
+639
+00:26:19,840 --> 00:26:22,400
+works. Node is installed through NVM.
+
+640
+00:26:22,400 --> 00:26:24,480
+You can check your node version and that
+
+641
+00:26:24,480 --> 00:26:27,120
+you understand where tsconfig.json
+
+642
+00:26:27,120 --> 00:26:30,480
+lives. Second, open your tsconfig.json
+
+643
+00:26:30,480 --> 00:26:32,480
+again and read it slowly. You don't need
+
+644
+00:26:32,480 --> 00:26:34,799
+to understand every option, but you
+
+645
+00:26:34,799 --> 00:26:36,559
+should recognize what strict mode is,
+
+646
+00:26:36,559 --> 00:26:38,480
+what target means, and that this file
+
+647
+00:26:38,480 --> 00:26:41,360
+affects compile time, not runtime. And
+
+648
+00:26:41,360 --> 00:26:43,919
+third, try to break things on purpose.
+
+649
+00:26:43,919 --> 00:26:45,760
+Write some code later that typescript
+
+650
+00:26:45,760 --> 00:26:47,840
+complains about. That discomfort is part
+
+651
+00:26:47,840 --> 00:26:49,840
+of the learning process. The series is
+
+652
+00:26:49,840 --> 00:26:51,840
+not about shortcuts. It's about building
+
+653
+00:26:51,840 --> 00:26:54,000
+correct mental models. Some videos will
+
+654
+00:26:54,000 --> 00:26:56,480
+feel slower. Some concepts will feel
+
+655
+00:26:56,480 --> 00:26:58,880
+strict or annoying at first. That's
+
+656
+00:26:58,880 --> 00:27:01,440
+normal and it's intentional. In the next
+
+657
+00:27:01,440 --> 00:27:03,360
+video, we'll start writing real
+
+658
+00:27:03,360 --> 00:27:06,240
+TypeScript. We'll cover some primitive
+
+659
+00:27:06,240 --> 00:27:08,640
+types, uh perhaps object types, and how
+
+660
+00:27:08,640 --> 00:27:10,799
+TypeScript actually infers types for
+
+661
+00:27:10,799 --> 00:27:12,960
+you. This is where things start to
+
+662
+00:27:12,960 --> 00:27:15,520
+click. If this video helped you, feel
+
+663
+00:27:15,520 --> 00:27:17,679
+free to subscribe and like, but more
+
+664
+00:27:17,679 --> 00:27:19,919
+importantly, actually code along. That's
+
+665
+00:27:19,919 --> 00:27:22,159
+where the learning happens. I'll see you
+
+666
+00:27:22,159 --> 00:27:24,723
+in the next one.
+
+667
+00:27:24,723 --> 00:27:26,743
+[music]
+
+668
+00:27:32,584 --> 00:27:34,604
+>> [music]
+
+669
+00:27:40,960 --> 00:27:43,039
+>> Heat.
