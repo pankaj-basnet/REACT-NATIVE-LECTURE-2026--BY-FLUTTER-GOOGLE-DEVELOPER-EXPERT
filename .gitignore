@@ -1,2 +1,11 @@
 git-done
+# LECTURES/1-A/git-done2
+LECTURES/1-A/node_modules
+
+# D:\src\REACT-NATIVE-\TUTS-\YTD-\VANDAD-REACT-TYPESCRIPT-GITHUB-\LECTURE-\LECTURES\1-A\node_modules
+# D:\src\REACT-NATIVE-\TUTS-\YTD-\VANDAD-REACT-TYPESCRIPT-GITHUB-\LECTURE-\.gitignore
+
+LECTURES/1-A/node_modules/*
+
+
 git-initialized-251228-.md
