@@ -6,40 +6,47 @@
 ---
 
 
-| **00:16:35** | Node.js Fundamentals | **Rationale:** JavaScript was born for browsers, but Node.js allows it to run on your computer/servers.
-| **00:16:56** | The V8 Engine | **Rationale:** To explain the speed and reliability of the runtime.
-| **00:17:35** | Version Management | **Rationale:** Different projects often require different versions of Node (e.g., v18 vs v20).
-| **00:17:54** | Professional Setup | The "correct" workflow: Install **NVM** first, then use it to install **Node.js**. This ensures Node is managed and switchable from day one. |
-| **00:18:27** | LTS vs. Experimental | **Rationale:** Stability is prioritized over "newness" for production work.
+- https://github.com/pankaj-basnet/REACT-NATIVE-LECTURE-2026--BY-FLUTTER-GOOGLE-DEVELOPER-EXPERT/blob/main/SUB-/1-A-DEC-28-b-.md
 
 
-| **00:18:48**  | NVM Installation            | **Rationale:** Accessing the source of truth for the version manager. 
-| **00:19:10**  | Managing Node Versions      | **Rationale:** Verifying that the environment is correctly configured and ready for software. 
-| **00:19:26**  | Node Package Manager (npm)  | **Rationale:** Once Node is active, you gain access to the world’s largest software registry. 
-
-| **00:19:33**  | Global Installation          | **Rationale:** Installing TypeScript globally allows you to run compiler commands from any folder/project. 
-| **00:19:40**  | Verification & TSC           | **Rationale:** Confirming a successful installation before proceeding to code. 
+---
+---
 
 
-| **00:19:56** | TypeScript Initialization | **Rationale:** To create the "brain" of the project's type-checking logic.
-| **00:20:04** | The tsconfig.json      | **Rationale:** To establish project-specific rules (e.g., target JS version).
-| **00:20:13** | Core Dependencies      | **Rationale:** To automate the development workflow and reduce manual compilation.
-| **00:20:28** | nodemon.json Config  | **Rationale:** To define the "trigger" and "action" for automatic updates.
-| **00:21:13** | The 'exec' Script    | **Rationale:** To bridge the gap between TS code and the Node.js runtime.
-| **00:21:24** | npm dev Scripts      | **Rationale:** To create a simple, memorable command for daily work.
-
-
-| **00:21:58** | The `strict: true` Flag | **Rationale:** To transition from "suggestion mode" to an actual safety net.
-| **00:23:08** | Target Version | **Rationale:** To define the compatibility of the output code.
-| **00:23:43** | Module Systems | **Rationale:** To manage how files talk to each other (imports/exports).
-| **00:24:48** | Static vs. Runtime | **Rationale:** Reinforcing the mental model that TS settings do not change execution speed.
-| **00:24:23** | Cargo Culting | **Rationale:** Developers often copy massive config files without knowing what problems they solve.
-| **00:25:21** | The "Silencing" Error | **Rationale:** Turning off `strict` mode to hide red squiggly lines.
-
-
-| **00:25:34** | Recap of Core Values | **Focus:** Prioritizing "correctness" over being "clever."
-| **00:26:07** | The "Golden Rule" | **The Idea:** TypeScript is not about writing *more* code; it is about making **incorrect code harder to write**. |
-| **00:27:01** | Looking Ahead | **Next Steps:** Transitioning into primitive types, object types, and the mechanics of **type inference**. |
+- | **00:16:35** | Node.js Fundamentals | **Rationale:** JavaScript was born for browsers, but Node.js allows it to run on your computer/servers.
+- | **00:16:56** | The V8 Engine | **Rationale:** To explain the speed and reliability of the runtime.
+- | **00:17:35** | Version Management | **Rationale:** Different projects often require different versions of Node (e.g., v18 vs v20).
+- | **00:17:54** | Professional Setup | The "correct" workflow: Install **NVM** first, then use it to install **Node.js**. This ensures Node is managed and switchable from day one. |
+- | **00:18:27** | LTS vs. Experimental | **Rationale:** Stability is prioritized over "newness" for production work.
+- 
+- 
+- | **00:18:48**  | NVM Installation            | **Rationale:** Accessing the source of truth for the version manager. 
+- | **00:19:10**  | Managing Node Versions      | **Rationale:** Verifying that the environment is correctly configured and ready for software. 
+- | **00:19:26**  | Node Package Manager (npm)  | **Rationale:** Once Node is active, you gain access to the world’s largest software registry. 
+- 
+- | **00:19:33**  | Global Installation          | **Rationale:** Installing TypeScript globally allows you to run compiler commands from any folder/project. 
+- | **00:19:40**  | Verification & TSC           | **Rationale:** Confirming a successful installation before proceeding to code. 
+- 
+- 
+- | **00:19:56** | TypeScript Initialization | **Rationale:** To create the "brain" of the project's type-checking logic.
+- | **00:20:04** | The tsconfig.json      | **Rationale:** To establish project-specific rules (e.g., target JS version).
+- | **00:20:13** | Core Dependencies      | **Rationale:** To automate the development workflow and reduce manual compilation.
+- | **00:20:28** | nodemon.json Config  | **Rationale:** To define the "trigger" and "action" for automatic updates.
+- | **00:21:13** | The 'exec' Script    | **Rationale:** To bridge the gap between TS code and the Node.js runtime.
+- | **00:21:24** | npm dev Scripts      | **Rationale:** To create a simple, memorable command for daily work.
+- 
+- 
+- | **00:21:58** | The `strict: true` Flag | **Rationale:** To transition from "suggestion mode" to an actual safety net.
+- | **00:23:08** | Target Version | **Rationale:** To define the compatibility of the output code.
+- | **00:23:43** | Module Systems | **Rationale:** To manage how files talk to each other (imports/exports).
+- | **00:24:48** | Static vs. Runtime | **Rationale:** Reinforcing the mental model that TS settings do not change execution speed.
+- | **00:24:23** | Cargo Culting | **Rationale:** Developers often copy massive config files without knowing what problems they solve.
+- | **00:25:21** | The "Silencing" Error | **Rationale:** Turning off `strict` mode to hide red squiggly lines.
+- 
+- 
+- | **00:25:34** | Recap of Core Values | **Focus:** Prioritizing "correctness" over being "clever."
+- | **00:26:07** | The "Golden Rule" | **The Idea:** TypeScript is not about writing *more* code; it is about making **incorrect code harder to write**. |
+- | **00:27:01** | Looking Ahead | **Next Steps:** Transitioning into primitive types, object types, and the mechanics of **type inference**. |
 
 
 

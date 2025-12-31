@@ -6,40 +6,44 @@
 ---
 ---
 
-| **00:00:07** | Series Goals | Moving from scratch to advanced production concepts in TS, React, and React Native. |
-| **00:00:16** | Mentality | Focus on "why" things work; avoiding blind copying of snippets. |
-| **00:00:49** | Learning Path | Fundamentals of Web (React) and  Mobile (React Native). |
-| **00:01:15** | Format | Intentionally long (1 hr) videos to explore edge cases and "mistakes on purpose." |
-| **00:01:32** | Why TypeScript? | Solving the "annoyance" of bugs by surfacing them early in the development cycle. |
-| **00:01:56** | The Transition | Acknowledging that TS might feel "uncomfortable" or restrictive for JS developers at first. |
-| **00:02:35** | Prerequisites | Only basic JavaScript knowledge is required; concepts will be revisited multiple times. |
+- https://github.com/pankaj-basnet/REACT-NATIVE-LECTURE-2026--BY-FLUTTER-GOOGLE-DEVELOPER-EXPERT/blob/main/SUB-/1-A-DEC-28-.md
 
-| **00:03:00** | The JS Paradox | JS is flexible and expressive for speed, but that same flexibility causes long-term structural issues. |
-| **00:03:30** | Dynamic Typing | The language does not enforce data shapes or variable types; it "trusts" the developer until the code runs. |
-| **00:04:15** | Delayed Errors | JS errors often fail in production or for the end-user rather than during development, making them expensive to fix. |
-| **00:04:45** | Implicit Contracts | Contracts regarding function arguments only exist in the developer's head or comments, not in the code itself. |
-| **00:05:15** | Refactoring Risks | Changing code in JS is likened to "walking through a dark room," relying on manual testing to ensure nothing broke. |
-| **00:05:45** | Testing Limitations | While tests are vital, they don't provide real-time feedback in the editor or assist with autocomplete and documentation. |
-| **00:06:05** | Team Assumption Drift | In teams, assumptions about data shapes slowly drift away from reality as the codebase evolves, leading to bugs. |
-| **00:06:40** | The Issue of Scale | JS scales well in features but poorly in "correctness" as complexity and data transformations increase. |
-| **00:07:00** | Modern App Needs | Large, stateful, and long-lived apps (React/React Native) require stronger guarantees than JS provides. |
-| **00:07:25** | The Safety Layer | TS adds clarity and early feedback before the code ever reaches a browser or mobile device. |
-| **00:07:45** | Definition of TS | TS is introduced as a tool to fill the gap between permissive writing and reliable execution. |
+---
 
-| **00:07:55** | TypeScript vs. Runtime | TS is **not** a new runtime. It does not change how code executes or add features to the JS engine; browsers remain 100% TS-ignorant. |
-| **00:08:19** | Development Time | TS's job is to analyze code **before** it runs. It uses descriptions or inference to tell you if your logic "makes sense." |
-| **00:08:55** | Compilation/Erasure | The process of converting `.ts` to `.js`. Once compiled, every trace of TS is erased, leaving only plain JavaScript to run on the device. |
-| **00:09:31** | Runtime Blindspots | TS cannot prevent bugs from "outside" data (e.g., a network request returning a 404 or a null value). It is a **static system**, not a runtime validator. |
-| **00:10:01** | Visible Mistakes | TS excels at catching errors "visible" in code: incorrect function calls, missing properties, or unhandled cases. |
-| **00:10:13** | Type Inference | TS can "look" at your code and figure out types automatically. Types should be treated as **signals** (clarity) rather than **noise** (clutter). |
-
-| **00:11:58** | Developer Tooling | Shift your mindset: TS is a **developer tool**, not just a language feature. Its real value is the instant feedback provided during the act of writing code. |
-| **00:12:43** | Tight Feedback Loop | Problems are surfaced in milliseconds within the editor. This prevents "Production surprises" where users find bugs before you do. |
-| **00:13:02** | Reduced Context Switching | In JS, you rely on memory or external docs. In TS, the function signature itself tells you the required arguments and return types. |
-| **00:14:44** | Self-Documenting Code | Well-defined types act as a living manual. This often eliminates the need for written comments, benefiting both teammates and your "future self." |
-| **00:13:23** | Intelligence at Scale | Autocomplete and Intellisense guide you through valid properties, catching typos instantly and reducing the "cognitive load" of remembering object shapes. |
-| **00:13:57** | Mechanical Refactoring | Refactoring moves from "stressful/risky" to "guided/mechanical." If you change a property name, the compiler flags every affected component immediately. |
-| **00:14:32** | Data Flow Contracts | In React, data flows through deep component trees. TS ensures that when a "contract" (prop type) changes, both the sender and receiver are updated. |
+- | **00:00:07** | Series Goals | Moving from scratch to advanced production concepts in TS, React, and React Native. |
+- | **00:00:16** | Mentality | Focus on "why" things work; avoiding blind copying of snippets. |
+- | **00:00:49** | Learning Path | Fundamentals of Web (React) and  Mobile (React Native). |
+- | **00:01:15** | Format | Intentionally long (1 hr) videos to explore edge cases and "mistakes on purpose." |
+- | **00:01:32** | Why TypeScript? | Solving the "annoyance" of bugs by surfacing them early in the development cycle. |
+- | **00:01:56** | The Transition | Acknowledging that TS might feel "uncomfortable" or restrictive for JS developers at first. |
+- | **00:02:35** | Prerequisites | Only basic JavaScript knowledge is required; concepts will be revisited multiple times. |
+- 
+- | **00:03:00** | The JS Paradox | JS is flexible and expressive for speed, but that same flexibility causes long-term structural issues. |
+- | **00:03:30** | Dynamic Typing | The language does not enforce data shapes or variable types; it "trusts" the developer until the code runs. |
+- | **00:04:15** | Delayed Errors | JS errors often fail in production or for the end-user rather than during development, making them expensive to fix. |
+- | **00:04:45** | Implicit Contracts | Contracts regarding function arguments only exist in the developer's head or comments, not in the code itself. |
+- | **00:05:15** | Refactoring Risks | Changing code in JS is likened to "walking through a dark room," relying on manual testing to ensure nothing broke. |
+- | **00:05:45** | Testing Limitations | While tests are vital, they don't provide real-time feedback in the editor or assist with autocomplete and documentation. |
+- | **00:06:05** | Team Assumption Drift | In teams, assumptions about data shapes slowly drift away from reality as the codebase evolves, leading to bugs. |
+- | **00:06:40** | The Issue of Scale | JS scales well in features but poorly in "correctness" as complexity and data transformations increase. |
+- | **00:07:00** | Modern App Needs | Large, stateful, and long-lived apps (React/React Native) require stronger guarantees than JS provides. |
+- | **00:07:25** | The Safety Layer | TS adds clarity and early feedback before the code ever reaches a browser or mobile device. |
+- | **00:07:45** | Definition of TS | TS is introduced as a tool to fill the gap between permissive writing and reliable execution. |
+- 
+- | **00:07:55** | TypeScript vs. Runtime | TS is **not** a new runtime. It does not change how code executes or add features to the JS engine; browsers remain 100% TS-ignorant. |
+- | **00:08:19** | Development Time | TS's job is to analyze code **before** it runs. It uses descriptions or inference to tell you if your logic "makes sense." |
+- | **00:08:55** | Compilation/Erasure | The process of converting `.ts` to `.js`. Once compiled, every trace of TS is erased, leaving only plain JavaScript to run on the device. |
+- | **00:09:31** | Runtime Blindspots | TS cannot prevent bugs from "outside" data (e.g., a network request returning a 404 or a null value). It is a **static system**, not a runtime validator. |
+- | **00:10:01** | Visible Mistakes | TS excels at catching errors "visible" in code: incorrect function calls, missing properties, or unhandled cases. |
+- | **00:10:13** | Type Inference | TS can "look" at your code and figure out types automatically. Types should be treated as **signals** (clarity) rather than **noise** (clutter). |
+- 
+- | **00:11:58** | Developer Tooling | Shift your mindset: TS is a **developer tool**, not just a language feature. Its real value is the instant feedback provided during the act of writing code. |
+- | **00:12:43** | Tight Feedback Loop | Problems are surfaced in milliseconds within the editor. This prevents "Production surprises" where users find bugs before you do. |
+- | **00:13:02** | Reduced Context Switching | In JS, you rely on memory or external docs. In TS, the function signature itself tells you the required arguments and return types. |
+- | **00:14:44** | Self-Documenting Code | Well-defined types act as a living manual. This often eliminates the need for written comments, benefiting both teammates and your "future self." |
+- | **00:13:23** | Intelligence at Scale | Autocomplete and Intellisense guide you through valid properties, catching typos instantly and reducing the "cognitive load" of remembering object shapes. |
+- | **00:13:57** | Mechanical Refactoring | Refactoring moves from "stressful/risky" to "guided/mechanical." If you change a property name, the compiler flags every affected component immediately. |
+- | **00:14:32** | Data Flow Contracts | In React, data flows through deep component trees. TS ensures that when a "contract" (prop type) changes, both the sender and receiver are updated. |
 
 
 ---
